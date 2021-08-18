@@ -22,9 +22,14 @@
 
 Pour commencer a utilisé l'application, il va falloir installer les dépendances nodeJS dans le fichier server via les commandes :
 
-    cd server
-    npm init
+    	cd server
+    	npm install
 
+Puis dans le dossier clientServerMock :
+
+	cd clientServerMock
+	npm install
+	
 Ensuite, nous allons définir les variables de notre environnement. Pour cela, il y a 4 fichiers potentiels qu'il est nécessaire de modifier.
 
  * Dans le dossier clientServerMock, fichier server.js : On peut modifier le port d'écoute du serveur via la variable "Port". Par défaut, le port est 8080.
@@ -38,7 +43,7 @@ Il ne manque plus qu'a utiliser les scripts SQL situé dans le dossier SQL afin 
 Une fois que tout le nécessaire a été fait, nous pouvons lancer l'application.
 On démarre le service de la base de donnée si requis via la commande suivante :
 
-     sudo service postgresql start
+     	sudo service postgresql start
 
 On démarre ensuite le server back en se mettant a la racine du projet via la commande suivante : 
 
