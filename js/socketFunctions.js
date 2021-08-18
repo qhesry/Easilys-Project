@@ -3,10 +3,11 @@ import * as PartyFunctions from './partyFunctions.js';
 import * as TchatFunctions from './tchatFunctions.js';
 
 export var socket;
+var port = 3000;
 
 function openConnectionSocket() {
     if (undefined === socket) {
-        socket = new WebSocket('ws://localhost:3000/');
+        socket = new WebSocket('ws://localhost:' + port + '/');
     }
 }
 

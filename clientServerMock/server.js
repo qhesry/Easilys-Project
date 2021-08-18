@@ -5,7 +5,6 @@ const app = express();
 const port = 8080;
 
 app.get('/', (req, res) => {
-    console.log(path.join(__dirname, '../ui/index.html'));
     fs.readFile(path.join(__dirname, '../ui/index.html'), 'utf8', (err, text) => {
         res.send(text);
     });
