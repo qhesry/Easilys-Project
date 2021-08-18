@@ -59,12 +59,14 @@ Il nous suffit ensuite d'aller sur l'url :
 
 ## Utilisation
 L'application se présente de la façon suivante :
+
 ![Application](https://i2.paste.pics/DKX38.png)
 * Une barre d'ajout de partie.
 * Un ecran d'affichage des parties en cours ou terminés.
 * Un chat ou l'on peut se connecter pour discuter avec les autres utilisateurs. La connexion ne necessite que de rentrer un pseudo.
 
 Lorsque l'on se connecte au chat, l'interface se modifie pour apparaitre comme tel : 
+
 ![Application](https://i2.paste.pics/DKX46.png)
 
 On peut ainsi : 
