@@ -31,8 +31,21 @@ Ensuite, nous allons définir les variables de notre environnement. Pour cela, i
  * Dans le dossier server : 
 	 * fichier utils.js : On peut modifier le port d'écoute du serveur via la variable "Port".
 	 * fichier database.config.json : On peut modifier tous les paramètres permettant la connexion a la base postgreSQL.
-- Dans le dossier js, fichier socketFunctions.js : On peut modifier le port sur lequel nous allons faire nos requêtes (ce port doit être le même que dans le fichier utils.js précédemment cité).
+* Dans le dossier js, fichier socketFunctions.js : On peut modifier le port sur lequel nous allons faire nos requêtes (ce port doit être le même que dans le fichier utils.js précédemment cité).
 
 Il ne manque plus qu'a utiliser les scripts SQL situé dans le dossier SQL afin de pouvoir créer notre base de donnée avec toutes les tables nécessaires a l'application.
 ## Utilisation
+L'application se présente de la façon suivante :
 ![Application](https://i2.paste.pics/DKX38.png)
+* Une barre d'ajout de partie.
+* Un ecran d'affichage des parties en cours ou terminés.
+* Un chat ou l'on peut se connecter pour discuter avec les autres utilisateurs. La connexion ne necessite que de rentrer un pseudo.
+
+Lorsque l'on se connecte au chat, l'interface se modifie pour apparaitre comme tel : 
+![Application](https://i2.paste.pics/DKX46.png)
+
+On peut ainsi : 
+* Lire les messages envoyés sur le tchat dans l'onglet "Tchat".
+* Voir les utilisateurs connectés dans l'onglet "User Connected".
+* Se deconnecter.
+* Envoyer des messages dans le tchat.
