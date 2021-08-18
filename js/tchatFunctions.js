@@ -1,31 +1,31 @@
-export {connectToTchat, disconnectFromTchat, updateUserConnected, updateTchatMessages, switchTabs, displayTchat, closeTchat, sendMessageToTchat};
+export { connectToTchat, disconnectFromTchat, updateUserConnected, updateTchatMessages, switchTabs, displayTchat, closeTchat, sendMessageToTchat };
 
 /*Tchat functions*/
 var myUuid;
 var myUsername;
 
-export function setMyUuid(uuid){
-   myUuid = uuid;
+export function setMyUuid(uuid) {
+    myUuid = uuid;
 }
 
-export function getmyUuid(){
+export function getmyUuid() {
     return myUuid;
 }
 
-export function setMyUsername(username){
+export function setMyUsername(username) {
     myUsername = username;
 }
 
-export function getMyUsername(){
+export function getMyUsername() {
     return myUsername;
 }
 
 function connectToTchat(socket) {
     let nickname = document.getElementById('nickname');
     let message = document.getElementById('validFeedbackUsername');
-    if(nickname.value === ""){
+    if (nickname.value === "") {
         message.setAttribute('style', 'display: block');
-    }else{
+    } else {
         let connectToTchatMessage = {
             action: "connectToTchat",
             name: nickname.value

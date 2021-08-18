@@ -14,10 +14,10 @@ function addAllEventListener() {
     let usersLink = document.getElementById('usersLink');
     let sendMessageToTchatButton = document.getElementById('sendMessageToTchatButton');
 
-    createPartyButton.addEventListener('click', () => {PartyFunctions.createParty(SocketFunctions.socket)});
-    connectToTchatButton.addEventListener('click', () => {TchatFunctions.connectToTchat(SocketFunctions.socket)});
-    disconnectFromTchatButton.addEventListener('click', () => {TchatFunctions.disconnectFromTchat(SocketFunctions.socket)});
-    tchatLink.addEventListener('click', () => { TchatFunctions.switchTabs('tchat')});
-    usersLink.addEventListener('click', () => { TchatFunctions.switchTabs('users')});
-    sendMessageToTchatButton.addEventListener('click', () => { TchatFunctions.sendMessageToTchat(SocketFunctions.socket)});
+    createPartyButton.addEventListener('click', () => { PartyFunctions.createParty(SocketFunctions.socket) });
+    connectToTchatButton.addEventListener('click', () => { TchatFunctions.connectToTchat(SocketFunctions.socket) });
+    disconnectFromTchatButton.addEventListener('click', () => { TchatFunctions.disconnectFromTchat(SocketFunctions.socket) });
+    tchatLink.addEventListener('click', () => { TchatFunctions.switchTabs('tchat') });
+    usersLink.addEventListener('click', () => { TchatFunctions.switchTabs('users') });
+    sendMessageToTchatButton.addEventListener('click', () => { TchatFunctions.sendMessageToTchat(SocketFunctions.socket) });
 }

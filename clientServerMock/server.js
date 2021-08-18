@@ -36,5 +36,5 @@ app.get('/ui/icon/user.svg', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`clientServerMock listen at http://localhost:${port}`)
+    console.log(`clientServerMock listen at http://localhost:${port}`)
 });

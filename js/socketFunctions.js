@@ -1,4 +1,4 @@
-export {openConnectionSocket, initializeOnMessageSocket};
+export { openConnectionSocket, initializeOnMessageSocket };
 import * as PartyFunctions from './partyFunctions.js';
 import * as TchatFunctions from './tchatFunctions.js';
 
