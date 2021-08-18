@@ -1,0 +1,23 @@
+{
+  "name": "clientservermock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qhesry/Easilys-Project.git"
+  },
+  "author": "Quentin Hesry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qhesry/Easilys-Project/issues"
+  },
+  "homepage": "https://github.com/qhesry/Easilys-Project#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
