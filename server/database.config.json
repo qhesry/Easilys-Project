@@ -1,0 +1,8 @@
+{
+    "host": "localhost",
+    "port": 5432,
+    "databaseName": "BabyfootManager",
+    "userDatabase": "postgres",
+    "passwordDatabase": "postgres",
+    "maxConnection": 30
+}

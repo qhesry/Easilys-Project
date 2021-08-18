@@ -1,5 +1,5 @@
 import { getAllParties, addParty, removeParty, switchPartyState } from './partyFunctions.js';
-import { connectToTchat, disconnectFromTchat, sendMessageToTchat} from './tchatFunctions.js';
+import { connectToTchat, disconnectFromTchat, sendMessageToTchat } from './tchatFunctions.js';
 import { initDB } from './database.js';
 import { wss } from './utils.js';
 
