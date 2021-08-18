@@ -1,12 +1,3 @@
-CREATE DATABASE "BabyfootManager"
-    WITH 
-    OWNER = postgres
-    ENCODING = 'UTF8'
-    LC_COLLATE = 'C.UTF-8'
-    LC_CTYPE = 'C.UTF-8'
-    TABLESPACE = pg_default
-    CONNECTION LIMIT = -1;
-
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;
