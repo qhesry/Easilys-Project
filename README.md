@@ -27,11 +27,11 @@ Pour commencer a utilisé l'application, il va falloir installer les dépendance
 
 Ensuite, nous allons définir les variables de notre environnement. Pour cela, il y a 4 fichiers potentiels qu'il est nécessaire de modifier.
 
- * Dans le dossier clientServerMock, fichier server.js : On peut modifier le port d'écoute du serveur via la variable "Port".
+ * Dans le dossier clientServerMock, fichier server.js : On peut modifier le port d'écoute du serveur via la variable "Port". Par défaut, le port est 8080.
  * Dans le dossier server : 
-	 * fichier utils.js : On peut modifier le port d'écoute du serveur via la variable "Port".
+	 * fichier utils.js : On peut modifier le port d'écoute du serveur via la variable "Port". Par défaut, le port est 3000.
 	 * fichier database.config.json : On peut modifier tous les paramètres permettant la connexion a la base postgreSQL.
-* Dans le dossier js, fichier socketFunctions.js : On peut modifier le port sur lequel nous allons faire nos requêtes (ce port doit être le même que dans le fichier utils.js précédemment cité).
+* Dans le dossier js, fichier socketFunctions.js : On peut modifier le port sur lequel nous allons faire nos requêtes (ce port doit être le même que dans le fichier utils.js précédemment cité). Par défaut, le port est 3000.
 
 Il ne manque plus qu'a utiliser les scripts SQL situé dans le dossier SQL afin de pouvoir créer notre base de donnée avec toutes les tables nécessaires a l'application.
 
