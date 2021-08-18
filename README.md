@@ -34,6 +34,24 @@ Ensuite, nous allons définir les variables de notre environnement. Pour cela, i
 * Dans le dossier js, fichier socketFunctions.js : On peut modifier le port sur lequel nous allons faire nos requêtes (ce port doit être le même que dans le fichier utils.js précédemment cité).
 
 Il ne manque plus qu'a utiliser les scripts SQL situé dans le dossier SQL afin de pouvoir créer notre base de donnée avec toutes les tables nécessaires a l'application.
+
+Une fois que tout le nécessaire a été fait, nous pouvons lancer l'application.
+On démarre le service de la base de donnée si requis via la commande suivante :
+
+     sudo service postgresql start
+
+On démarre ensuite le server back en se mettant a la racine du projet via la commande suivante : 
+
+	node server/server.js
+
+On peut ensuite démarrer le serveur mock de la même manière via la commande : 
+	
+	node clientServerMock/server.js
+
+Il nous suffit ensuite d'aller sur l'url : 
+
+	http://localhost: + le port défini dans le fichier server.js du dossier clientServerMock
+
 ## Utilisation
 L'application se présente de la façon suivante :
 ![Application](https://i2.paste.pics/DKX38.png)
