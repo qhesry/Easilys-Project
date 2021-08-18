@@ -1,0 +1,13 @@
+.notDisplayedAtStart{
+    display: none;
+}
+
+.overflow{
+    overflow-y:auto;
+    height: 800px;
+}
+
+.alertMessageFeedback{
+    color: red;
+    font-style: italic;
+}

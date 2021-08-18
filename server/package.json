@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Hesry Quentin",
+  "license": "ISC",
+  "dependencies": {
+    "pg-promise": "^10.11.0",
+    "uuid": "^8.3.2",
+    "ws": "^8.1.0"
+  },
+  "type": "module"
+}
