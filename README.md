@@ -61,16 +61,24 @@ Il nous suffit ensuite d'aller sur l'url :
 L'application se présente de la façon suivante :
 
 ![Application](https://i2.paste.pics/DKX38.png)
-* Une barre d'ajout de partie.
+* Une barre d'ajout de partie. On peut ajouter une partie grâce au bouton "Add"
 * Un ecran d'affichage des parties en cours ou terminés.
 * Un chat ou l'on peut se connecter pour discuter avec les autres utilisateurs. La connexion ne necessite que de rentrer un pseudo.
 
 Lorsque l'on se connecte au chat, l'interface se modifie pour apparaitre comme tel : 
 
-![Application](https://i2.paste.pics/DKX46.png)
+![ImageTchat](https://i2.paste.pics/DKX46.png)
 
 On peut ainsi : 
 * Lire les messages envoyés sur le tchat dans l'onglet "Tchat".
 * Voir les utilisateurs connectés dans l'onglet "User Connected".
 * Se deconnecter.
 * Envoyer des messages dans le tchat.
+
+Si l'on ajoute une partie, l'interface l'ajoute a l'ecran d'affichage celle-ci. Cela apparait comme tel : 
+
+![ImagePartie](https://i2.paste.pics/DKX9K.png)
+
+* On peut terminer la partie en cliquant sur la checkbox. Celle-ci passera alors en rouge.
+* On voit le nom de la partie. Ici : test.
+* On peut supprimer la partie via le bouton "Remove".
