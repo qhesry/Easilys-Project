@@ -5,6 +5,7 @@ const __dirname = path.resolve();
 
 var dbConnection;
 
+//Initialize database connection with the configuration in database.config file
 export function initDB() {
     const database = pgp();
 

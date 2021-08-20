@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { broadcastMessageIncludingSelf, broadcastMessageExcludingSelf } from './utils.js';
 
+//Insert a message into the database and broadcast to every client that a new message has been send.
 export function sendMessageToTchat(db, ws, content) {
     var newUUID = uuidv4();
     var time = Date.now();
@@ -18,6 +19,7 @@ export function sendMessageToTchat(db, ws, content) {
     })
 }
 
+//Insert new user into the database, send him all information for users already connected and all old messages then broadcast to every client that a new user is now connected.
 export function connectToTchat(db, ws, content) {
     var newUUID = uuidv4();
     db.query('INSERT INTO TCHATUSERS VALUES ($1, $2)', [newUUID, content.name]).then(() => {
@@ -50,6 +52,7 @@ export function connectToTchat(db, ws, content) {
     })
 }
 
+//Delete user from database and broadcast to every client except the disconnected one that a user is now disconnected.
 export function disconnectFromTchat(db, ws, content) {
     db.query('DELETE FROM TCHATUSERS WHERE uuid = $1', [content.uuid]).then(() => {
         var tchatInfo = {

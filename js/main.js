@@ -2,10 +2,12 @@ import * as PartyFunctions from './partyFunctions.js';
 import * as TchatFunctions from './tchatFunctions.js';
 import * as SocketFunctions from './socketFunctions.js';
 
+//Initilize webSocket connection and webSocket response.
 SocketFunctions.openConnectionSocket();
 SocketFunctions.initializeOnMessageSocket();
 addAllEventListener();
 
+//Add all the events necessary to use the buttons of the application.
 function addAllEventListener() {
     let createPartyButton = document.getElementById('createPartyButton');
     let connectToTchatButton = document.getElementById('connectToTchatButton');

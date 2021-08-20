@@ -4,6 +4,7 @@ export { connectToTchat, disconnectFromTchat, updateUserConnected, updateTchatMe
 var myUuid;
 var myUsername;
 
+/*getter and setter for general variable*/
 export function setMyUuid(uuid) {
     myUuid = uuid;
 }
@@ -20,6 +21,7 @@ export function getMyUsername() {
     return myUsername;
 }
 
+//Send a connect message to the server.
 function connectToTchat(socket) {
     let nickname = document.getElementById('nickname');
     let message = document.getElementById('validFeedbackUsername');
@@ -35,6 +37,7 @@ function connectToTchat(socket) {
     }
 }
 
+//Send a disconnect message to the server.
 function disconnectFromTchat(socket) {
     let disconnectFromTchatMessage = {
         action: "disconnectFromTchat",
@@ -43,6 +46,7 @@ function disconnectFromTchat(socket) {
     socket.send(JSON.stringify(disconnectFromTchatMessage));
 }
 
+//Display tchat ui.
 function displayTchat(content) {
     hideConnectionForm();
     displayDisconnectionForm(content);
@@ -50,6 +54,7 @@ function displayTchat(content) {
     displaySendMessageForm();
 }
 
+//Hide tchat ui.
 function closeTchat() {
     displayConnectionForm();
     hideDisconnectionForm();
@@ -59,6 +64,7 @@ function closeTchat() {
     clearAllTchatMessage();
 }
 
+/* All functions to hide and display different block of ui for the tchat */
 function hideConnectionForm() {
     let connectForm = document.getElementById('connectForm');
     connectForm.setAttribute('style', 'display: none');
@@ -138,6 +144,7 @@ function hideUsersTab() {
     usersContainer.setAttribute('style', 'display: none');
 }
 
+//Update users connected in the user tab
 function updateUserConnected(content) {
     let usersContainer = document.getElementById('usersContainer');
     let user = userTemplate(content);
@@ -149,11 +156,13 @@ function updateUserConnected(content) {
     }
 }
 
+//clear the user connected tab from all users
 function clearAllUsers() {
     let usersContainer = document.getElementById('usersContainer');
     usersContainer.querySelectorAll('*').forEach(item => item.remove());
 }
 
+//Template used to add an user to the UI.
 function userTemplate(content) {
     let container = document.createElement('div');
     container.setAttribute('id', content.uuid);
@@ -172,6 +181,7 @@ function userTemplate(content) {
     return container;
 }
 
+//Send a message into the tchat.
 function sendMessageToTchat(socket) {
     let message = document.getElementById('message');
     let messageInfo = {
@@ -183,6 +193,7 @@ function sendMessageToTchat(socket) {
     message.value = "";
 }
 
+//Update tchat message for all user.
 function updateTchatMessages(content) {
     let tchatMessagesContainer = document.getElementById('messageContainer');
     let message = messageTemplate(content);
@@ -191,6 +202,7 @@ function updateTchatMessages(content) {
     tchatMessagesContainer.scrollTop = tchatMessagesContainer.scrollHeight;
 }
 
+//Template used to add a message to the UI.
 function messageTemplate(content) {
     let container = document.createElement('div');
     container.setAttribute('class', 'col')
@@ -214,11 +226,13 @@ function messageTemplate(content) {
     return container;
 }
 
+//Clear all tchat messages
 function clearAllTchatMessage() {
     let usersContainer = document.getElementById('messageContainer');
     usersContainer.querySelectorAll('*').forEach(item => item.remove());
 }
 
+//Utils functions to correctly display a time from miliseconds time.
 function dateStringFromMilliseconds(time) {
     let result = "";
     let milisecondsTime = new Date(parseInt(time));

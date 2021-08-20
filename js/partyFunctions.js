@@ -1,5 +1,6 @@
 export { createParty, removePartyFromDocument, addPartyToDocument, switchPartyState };
 
+//Function that send a message to the server to create a party.
 function createParty(socket) {
     let partyName = document.getElementById('partyName');
     let validFeedbackPartyName = document.getElementById('validFeedbackPartyName');
@@ -15,6 +16,7 @@ function createParty(socket) {
     }
 }
 
+//Template used to generate document elements to display a party.
 function partyTemplate(socket, content) {
     let container = document.createElement('div');
     container.setAttribute('class', 'row form-check');
@@ -58,6 +60,7 @@ function partyTemplate(socket, content) {
     return container;
 }
 
+//remove a party template from the document.
 function removePartyFromDocument(content) {
     let partyRemoved = document.getElementById(content.uuid);
     let partyDisplay = document.getElementById('partyDisplay');
@@ -67,6 +70,7 @@ function removePartyFromDocument(content) {
     }
 }
 
+//add a party to the document.
 function addPartyToDocument(socket, content) {
     let partyDisplay = document.getElementById('partyDisplay');
     let partyName = document.getElementById('partyName');
@@ -78,12 +82,14 @@ function addPartyToDocument(socket, content) {
     partyName.value = '';
 }
 
+//update counter of on going parties.
 function updateOnGoingCount() {
     let countOnGoingParty = document.getElementById('countOnGoingParty');
     let count = document.getElementById('partyDisplay').querySelectorAll("input[type='checkbox']:not(:checked)").length;
     countOnGoingParty.innerText = count;
 }
 
+//switch the party state to differentiate between on going and terminated party.
 function switchPartyState(content) {
     let childs = document.getElementById(content.uuid).childNodes;
     if (content.terminated) {

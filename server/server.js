@@ -3,8 +3,10 @@ import { connectToTchat, disconnectFromTchat, sendMessageToTchat } from './tchat
 import { initDB } from './database.js';
 import { wss } from './utils.js';
 
+//Initlize database.
 const db = initDB();
 
+//Initialize onMessage for the websocket with all the possibles messages that will be received from the client.
 wss.on('connection', (ws) => {
     var handshakeMessage = {
         action: 'connectionEtablished'
