@@ -22,9 +22,14 @@
 
 Pour commencer a utilisé l'application, il va falloir installer les dépendances nodeJS dans le fichier server via les commandes :
 
-    cd server
-    npm init
+	cd server
+	npm install
 
+Puis dans le dossier clientServerMock :
+
+	cd clientServerMock
+	npm install
+	
 Ensuite, nous allons définir les variables de notre environnement. Pour cela, il y a 4 fichiers potentiels qu'il est nécessaire de modifier.
 
  * Dans le dossier clientServerMock, fichier server.js : On peut modifier le port d'écoute du serveur via la variable "Port". Par défaut, le port est 8080.
@@ -38,7 +43,7 @@ Il ne manque plus qu'a utiliser les scripts SQL situé dans le dossier SQL afin 
 Une fois que tout le nécessaire a été fait, nous pouvons lancer l'application.
 On démarre le service de la base de donnée si requis via la commande suivante :
 
-     sudo service postgresql start
+	sudo service postgresql start
 
 On démarre ensuite le server back en se mettant a la racine du projet via la commande suivante : 
 
@@ -54,16 +59,26 @@ Il nous suffit ensuite d'aller sur l'url :
 
 ## Utilisation
 L'application se présente de la façon suivante :
+
 ![Application](https://i2.paste.pics/DKX38.png)
-* Une barre d'ajout de partie.
+* Une barre d'ajout de partie. On peut ajouter une partie grâce au bouton "Add"
 * Un ecran d'affichage des parties en cours ou terminés.
 * Un chat ou l'on peut se connecter pour discuter avec les autres utilisateurs. La connexion ne necessite que de rentrer un pseudo.
 
 Lorsque l'on se connecte au chat, l'interface se modifie pour apparaitre comme tel : 
-![Application](https://i2.paste.pics/DKX46.png)
+
+![ImageTchat](https://i2.paste.pics/DKX46.png)
 
 On peut ainsi : 
 * Lire les messages envoyés sur le tchat dans l'onglet "Tchat".
 * Voir les utilisateurs connectés dans l'onglet "User Connected".
 * Se deconnecter.
 * Envoyer des messages dans le tchat.
+
+Si l'on ajoute une partie, l'interface l'ajoute a l'ecran d'affichage celle-ci. Cela apparait comme tel : 
+
+![ImagePartie](https://i2.paste.pics/DKX9K.png)
+
+* On peut terminer la partie en cliquant sur la checkbox. Celle-ci passera alors en rouge.
+* On voit le nom de la partie. Ici : test.
+* On peut supprimer la partie via le bouton "Remove".
